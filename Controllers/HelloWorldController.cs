@@ -9,8 +9,8 @@ namespace MvcMovie.Controllers{
       return "Default action";
     }
 // /HelloWorld/Welcome
-    public string Welcome(){
-      return "welcome action method";
+    public string Welcome(string name, int ID = 1){
+      return HtmlEncoder.Default.Encode($"Hello {name}, ID:{ID}");
     }
   }
 
